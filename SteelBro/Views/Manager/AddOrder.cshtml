@@ -1,0 +1,72 @@
+﻿@model SteelBro.Models.Order
+
+@{
+    ViewData["Title"] = "Добавление заказа";
+}
+
+<link rel="stylesheet" href="~/css/manager.css" asp-append-version="true" />
+
+<section class="content-block">
+    <section class="manager-orders">
+        <h3>Добавление заказа</h3>
+        <form id="add-order-form" method="post">
+            <input type="hidden" name="ClientId" value="@ViewBag.ClientId" />
+
+            <div class="form-group">
+                <label for="service">Название услуги</label>
+                <select id="service" name="ServiceId" required>
+                    <option value="">Выберите услугу</option>
+                    @foreach (var service in ViewBag.Services)
+                    {
+                        <option value="@service.ServiceId">@service.ServiceName</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="worker">Работник</label>
+                <select id="worker" name="WorkerId" required>
+                    <option value="">Выберите работника</option>
+                    @foreach (var worker in ViewBag.Workers)
+                    {
+                        <option value="@worker.WorkerId">@worker.LastName @worker.FirstName @worker.MiddleName</option>
+                    }
+                </select>
+            </div>
+
+            <div id="components-section">
+                <h2>Добавить комплектующие</h2>
+                <div class="component-row">
+                    <div class="form-group">
+                        <label for="component-1">Комплектующее</label>
+                        <select id="component-1" name="SelectedComponents[0].ComponentId" required>
+                            <option value="">Выберите комплектующее</option>
+                            @foreach (var component in ViewBag.Components)
+                            {
+                                <option value="@component.ComponentId">@component.ComponentName</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity-1">Количество</label>
+                        <input type="number" id="quantity-1" name="SelectedComponents[0].Quantity" min="1" required />
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="add-component-btn" class="btn">Добавить комплектующее</button>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Создать заказ</button>
+                <button type="button" class="btn" id="back">Назад</button>
+            </div>
+        </form>
+    </section>
+</section>
+
+<!-- Передача списка комплектующих через data-* атрибут -->
+<div id="components-data" data-components='@Html.Raw(Json.Serialize(ViewBag.Components))' style="display: none;"></div>
+
+<script src="~/js/backScript.js" asp-append-version="true"></script>
+<script src="~/js/add_delete/addOrder.js" asp-append-version="true"></script>

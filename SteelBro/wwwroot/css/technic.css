@@ -1,0 +1,169 @@
+.technician-orders {
+    margin-bottom: 20px;
+}
+
+.technician-orders h1 {
+    margin-bottom: 20px;
+    font-size: 18pt;
+    text-align: center;
+}
+
+.search-filter {
+    margin-bottom: 20px;
+}
+
+.search-filter label {
+    margin-right: 10px;
+}
+
+.search-filter input[type="text"], .search-filter select {
+    outline: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.change-status {
+    margin-top: 20px;
+}
+
+.change-status label {
+    margin-right: 10px;
+}
+
+.change-status select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.but {
+    outline: none;
+    margin: 2vh 0;
+}
+
+.actions button {
+    margin-right: 2vw;
+}
+
+.components-table {
+    margin-bottom: 20px;
+}
+
+.components-table h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.search-actions {
+    margin-bottom: 20px;
+}
+
+.search-actions label {
+    margin-right: 10px;
+}
+
+    .search-actions input[type="text"] {
+        outline: none;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+
+.actions {
+    text-align: center;
+}
+
+.components h2, .status h2 {
+    margin-top: 2.5vh;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.components ul {
+    list-style: none;
+    padding: 0;
+}
+
+.components ul li {
+    margin: 5px 0;
+}
+
+.status p {
+    margin-top: 1vh;
+    margin-bottom: 0;
+    font-size: 14pt;
+}
+
+.status label {
+    margin-right: 10px;
+    font-size: 14pt;
+}
+
+.status select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#back {
+    margin-left: 21vw;
+}
+
+
+.add-component-form {
+    margin-bottom: 20px;
+}
+
+.add-component-form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.add-component-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-component-form input[type="number"], .add-component-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+
+
+.edit-fields {
+    margin-top: 20px;
+}
+
+.edit-fields label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-fields input[type="number"] {
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.actions {
+    text-align: center;
+}
+
+#buttonsDif button:first-child {
+    margin-right: 10vw;
+}

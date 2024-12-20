@@ -1,0 +1,86 @@
+﻿@model SteelBro.Models.Worker
+
+@{
+    ViewData["Title"] = "Просмотр работника";
+}
+
+<link rel="stylesheet" href="~/css/manager.css" asp-append-version="true" />
+
+<section class="content-block">
+    <section class="components-table">
+        <h3>Информация о работнике</h3>
+        <div class="blocks">
+            <!-- Первый столбец: Заголовки -->
+            <div class="user-info-attributes">
+                <p><strong>ФИО:</strong></p>
+                <p><strong>Имя пользователя:</strong></p>
+                <p><strong>Номер телефона:</strong></p>
+                <p><strong>Email:</strong></p>
+                <p><strong>Должность:</strong></p>
+                <p><strong>Роль:</strong></p>
+            </div>
+
+            <!-- Второй столбец: Значения -->
+            <div class="user-info" data-worker-id="@Model.WorkerId">
+                <p>@Model.LastName @Model.FirstName @Model.MiddleName</p>
+                @if (Model.User != null)
+                {
+                    <p>@Model.User.Username</p>
+                    <p>@Model.PhoneNumber</p>
+                    <p>@Model.Email</p>
+                    <p id="post">@Model.Post.PostName</p>
+                    <p id="role">@Model.User.Role.RoleName</p>
+                }
+                else
+                {
+                    <p>Пользователь не найден</p>
+                    <p>Должность не указана</p>
+                    <p>Роль не указана</p>
+                }
+            </div>
+        </div>
+
+        <div class="dropdowns">
+            <div>
+                <label for="role-select">Изменить роль:</label>
+                <select id="role-select">
+                    @if (ViewBag.Roles != null)
+                    {
+                        foreach (var role in ViewBag.Roles)
+                        {
+                            <option value="@role.RoleName">@role.RoleName</option>
+                        }
+                    }
+                    else
+                    {
+                        <option value="">Роли не найдены</option>
+                    }
+                </select>
+                <button id="update-role-btn" class="btn">Сохранить</button>
+            </div>
+            <div>
+                <label for="post-select">Изменить должность:</label>
+                <select id="post-select">
+                    @if (ViewBag.Posts != null)
+                    {
+                        foreach (var post in ViewBag.Posts)
+                        {
+                            <option value="@post.PostName">@post.PostName</option>
+                        }
+                    }
+                    else
+                    {
+                        <option value="">Должности не найдены</option>
+                    }
+                </select>
+                <button id="update-post-btn" class="btn">Сохранить</button>
+            </div>
+        </div>
+        <div class="but">
+            <button class="btn" id="back">Назад</button>
+        </div>
+    </section>
+</section>
+
+<script src="~/js/backScript.js" asp-append-version="true"></script>
+<script src="~/js/view/viewWorker.js" asp-append-version="true"></script>

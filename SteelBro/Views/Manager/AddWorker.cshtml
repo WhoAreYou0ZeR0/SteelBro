@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Добавление сотрудника";
+}
+
+<link rel="stylesheet" href="~/css/manager.css" asp-append-version="true" />
+
+<section class="content-block">
+    <section class="form-section">
+        <h1>Добавить сотрудника</h1>
+        <form id="add-worker-form" method="post" action="/Manager/AddWorker">
+            <div class="form-group">
+                <label for="lastName">Фамилия</label>
+                <input type="text" id="lastName" name="LastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName">Имя</label>
+                <input type="text" id="firstName" name="FirstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="middleName">Отчество</label>
+                <input type="text" id="middleName" name="MiddleName">
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Телефон</label>
+                <input type="text" id="phoneNumber" name="PhoneNumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="post">Должность</label>
+                <select id="post" name="PostId" required>
+                    <option value="">Выберите должность</option>
+                    @foreach (var post in ViewBag.Posts)
+                    {
+                        <option value="@post.PostId">@post.PostName</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" name="Username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="Password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Добавить сотрудника</button>
+                <button type="button" class="btn" onclick="goBack()">Назад</button>
+            </div>
+        </form>
+    </section>
+</section>
+
+<script src="~/js/backScript.js" asp-append-version="true"></script>

@@ -1,0 +1,149 @@
+.manager-orders {
+    margin-bottom: 20px;
+}
+
+.manager-orders h1 {
+    margin-bottom: 20px;
+    font-size: 18pt;
+    text-align: center;
+}
+
+.search-filter {
+    margin-bottom: 20px;
+}
+
+.search-filter label {
+    margin-right: 10px;
+}
+
+.search-filter input[type="text"], .search-filter select {
+    outline: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.change-status {
+    margin-top: 20px;
+}
+
+.change-status label {
+    margin-right: 10px;
+}
+
+.change-status select {
+    outline: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+select {
+        outline: none;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+
+.but {
+    margin: 2vh 0;
+}
+
+
+.but button:first-child {
+    margin-right: 30vw;
+}
+
+.role-change {
+    margin-top: 20px;
+}
+
+.role-change label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.role-change select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#back {
+    margin-left: 21vw;
+}
+
+.status p {
+    margin-top: 1vh;
+    margin-bottom: 0;
+    font-size: 14pt;
+}
+
+.status label {
+    margin-right: 10px;
+    font-size: 14pt;
+}
+
+.status select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+
+.edit-fields {
+    margin-top: 20px;
+}
+
+label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+input[type="number"] {
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+.actions {
+    text-align: center;
+}
+
+.components-table {
+    margin-bottom: 20px;
+}
+
+    .components-table h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+#add-component-btn {
+    margin-bottom: 3vh;
+}
+
+label {
+    margin-top: 2vh;
+}
+
+select, label {
+    font-size: 14pt;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    margin-top: 2vh;
+}

@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Заказы";
+}
+<link rel="stylesheet" href="~/css/technic.css" asp-append-version="true" />
+
+<section class="content-block">
+    <section class="technician-orders">
+        <h1>Заказы</h1>
+        <div class="search-filter">
+            <label for="client-search">Поиск по клиенту</label>
+            <input type="text" id="client-search" placeholder="Введите имя клиента">
+            <div class="but">
+                <button class="btn" id="find_btn">Найти</button>
+            </div>
+
+            <label for="status-filter">Фильтр по статусу</label>
+            <select id="status-filter">
+                <option value="all">Все</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Клиент</th>
+                    <th>Услуга</th>
+                    <th>Статус</th>
+                    <th>Дата начала</th>
+                    <th>Дата окончания</th>
+                </tr>
+            </thead>
+            <tbody id="orders-table-body">
+                <!-- Данные из базы данных будут вставлены здесь -->
+            </tbody>
+        </table>
+    </section>
+</section>
+<script src="~/js/load/loadStatusScript.js" asp-append-version="true"></script>

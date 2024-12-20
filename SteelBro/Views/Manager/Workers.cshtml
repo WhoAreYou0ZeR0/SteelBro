@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Список работников";
+}
+
+<link rel="stylesheet" href="~/css/manager.css" asp-append-version="true" />
+
+<section class="content-block">
+    <section class="manager-orders">
+        <h1>Список работников</h1>
+        <div class="search-filter">
+            <label for="worker-search">Поиск по работнику</label>
+            <input type="text" id="worker-search" placeholder="Введите ФИО работника">
+            <div class="but">
+                <button class="btn" id="find_btn">Найти</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>ФИО работника</th>
+                    <th>Номер телефона</th>
+                    <th>Email</th>
+                    <th>Должность</th>
+                    <th>Роль</th>
+                </tr>
+            </thead>
+            <tbody id="workers-table-body">
+                <!-- Данные из базы данных будут вставлены здесь -->
+            </tbody>
+        </table>
+    </section>
+</section>
+
+<script src="~/js/load/loadWorker.js" asp-append-version="true"></script>

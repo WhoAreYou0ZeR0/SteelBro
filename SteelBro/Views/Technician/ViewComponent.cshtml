@@ -1,0 +1,44 @@
+﻿@model SteelBro.Models.Component
+
+@{
+    ViewData["Title"] = "Просмотр комплектующего";
+}
+
+<link rel="stylesheet" href="~/css/technic.css" asp-append-version="true" />
+<section class="content-block">
+    <section class="components-table">
+        <h3>Информация</h3>
+        <div class="blocks">
+            <div class="user-info-attributes">
+                <p><strong>Название:</strong></p>
+                <p><strong>Количество:</strong></p>
+                <p><strong>Техническая характеристика:</strong></p>
+                <p><strong>Цена:</strong></p>
+            </div>
+            <div class="user-info" data-component-id="@Model.ComponentId">
+                <p id="nameComponent">@Model.ComponentName</p>
+                <p id="quantity">@Model.Quantity</p>
+                <p id="descrip">@Model.Specifications</p>
+                <p id="price">@Model.Price</p>
+            </div>
+        </div>
+        <div class="edit-fields">
+            <label for="component-quantity">Количество</label>
+            <input type="number" id="component-quantity" value="@Model.Quantity">
+
+            <label for="component-price">Цена</label>
+            <input type="number" id="component-price" value="@Model.Price">
+        </div>
+        <div class="but">
+            <button id="update-quantity-btn" class="btn">Изменить количество</button>
+            <button id="update-price-btn" class="btn">Изменить цену</button>
+            <button id="delete-component-btn" class="btn">Удалить компонент</button>
+        </div>
+        <div class="but">
+            <button class="btn" id="back">Назад</button>
+        </div>
+    </section>
+</section>
+
+<script src="~/js/backScript.js" asp-append-version="true"></script>
+<script src="~/js/view/viewComponent.js" asp-append-version="true"></script>

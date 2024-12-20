@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - SteelBro</title>
+	<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+</head>
+<body>
+	<header>
+		<div class="wrap-logo">
+			@if (User.Identity.IsAuthenticated)
+			{
+				@if (User.IsInRole("Administrator"))
+				{
+					<a class"nav-link text-dark" asp-area="" asp-controller="Technician" asp-action="Index"><img src="~/images/logo.png" class="ss" alt="logo" /></a>
+				}
+				else if (User.IsInRole("Manager"))
+				{
+					<a class"nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Index"><img src="~/images/logo.png" class="ss" alt="logo" /></a>
+				}
+				else if (User.IsInRole("Technician")) {
+					<a class"nav-link text-dark" asp-area="" asp-controller="Technician" asp-action="Index"><img src="~/images/logo.png" class="ss" alt="logo" /></a>
+				}
+				else if (User.IsInRole("Financier")) {
+					<a class"nav-link text-dark" asp-area="" asp-controller="Financier" asp-action="Index"><img src="~/images/logo.png" class="ss" alt="logo" /></a>
+				}
+				else if (User.IsInRole("Client")) {
+					<a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" class="ss" alt="logo" /></a>
+				}
+			}
+			else {
+				<a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" class="ss" alt="logo" /></a>
+			}
+
+		</div>
+		<ul class="menu-bar">
+			@if (User.Identity.IsAuthenticated)
+			{
+				@if (User.IsInRole("Administrator"))
+				{
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Technician" asp-action="Index">Заказы</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Clients">Клиенты</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Workers">Сотрудники</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Technician" asp-action="Components">Комплектующие</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Financier" asp-action="Index">Финансы</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Worker" asp-action="Index">Личный кабинет</a></li>
+				}
+				else if (User.IsInRole("Manager"))
+				{
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Index">Заказы</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Clients">Клиенты</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Workers">Сотрудники</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Worker" asp-action="Index">Личный кабинет</a></li>
+				}
+				else if (User.IsInRole("Technician"))
+				{
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Technician" asp-action="Index">Заказы</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Technician" asp-action="Components">Комплектующие</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Worker" asp-action="Index">Личный кабинет</a></li>
+
+				}
+				else if (User.IsInRole("Financier"))
+				{
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Financier" asp-action="Index">Финансы</a></li>
+					<li><a class="nav-link text-dark" asp-area="" asp-controller="Worker" asp-action="Index">Личный кабинет</a></li>
+				}
+				else if (User.IsInRole("Client"))
+				{
+					<li><a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+					<li><a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">О нас</a></li>
+					<li><a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Service">Услуги</a></li>
+					<li><a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a></li>
+					<li><a class"nav-link text-dark" asp-area="" asp-controller="Client" asp-action="Index">Личный кабинет</a></li>
+				}
+			}
+			else
+			{
+				<li><a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+				<li><a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">О нас</a></li>
+				<li><a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Service">Услуги</a></li>
+				<li><a class"nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a></li>
+				<li><a class"nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Index">Вход</a></li>
+			}
+		</ul>
+	</header>
+	<div class="content">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+	<footer>
+		<p>SteelBro – Ваш надежный партнер в мире цифровых технологий</p>
+		<p>Адрес: Санкт-Петербург, Старорусский просп., 6</p>
+		<p>Телефон: +7 (123) 123-45-67</p>
+		<p>Email: info@steelbro.ru</p>
+		<p>Время работы: Пн-Пт 9:00–18:00, Сб 10:00–16:00</p>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

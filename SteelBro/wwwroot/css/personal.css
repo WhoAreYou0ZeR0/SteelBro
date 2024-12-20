@@ -1,0 +1,14 @@
+.filters {
+    margin-bottom: 10px;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.filters select,
+.filters input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

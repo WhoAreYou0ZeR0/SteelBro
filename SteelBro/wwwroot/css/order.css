@@ -1,0 +1,32 @@
+.order-form {
+    background-color: var(--green-bg-color);
+    color: var(--info-bg-color);
+    padding: 20px;
+    margin: 10vh auto;
+    border-radius: 10px;
+    max-width: 50%;
+    font-size: 14pt;
+    
+}
+
+.order-form h1 {
+    margin-bottom: 5vh;
+    font-size: 18pt;
+    text-align: center;
+}
+
+.order-form label {
+    display: block;
+}
+
+.order-form select, .order-form textarea {
+    outline: none;
+    background-color: var(--info-bg-color);
+    width: 100%;
+    padding: 2.5vh;
+    margin-bottom: 15px;
+    border: 1px solid var(--green-bg-color);
+    border-radius: 10px;
+}
+
+

@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Комплектующие";
+}
+<link rel="stylesheet" href="~/css/technic.css" asp-append-version="true" />
+<section class="content-block">
+    <section class="components-table">
+        <div class="wrapper-info">
+            <h1>Комплектующие</h1>
+            <div class="search-actions">
+                <label for="component-search">Поиск по названию</label>
+                <input type="text" id="component-search" placeholder="Введите название">
+                <div class="but">
+                    <button id="search-component-btn" class="btn">Найти</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Название</th>
+                        <th>Количество</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody id="components-table-body">
+                    <!-- Данные из базы данных будут вставлены здесь -->
+                </tbody>
+            </table>
+            <div class="actions">
+                <div class="but">
+                    <button id="add-component-btn" class="btn">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<script src="~/js/load/loadComponentScript.js" asp-append-version="true"></script>

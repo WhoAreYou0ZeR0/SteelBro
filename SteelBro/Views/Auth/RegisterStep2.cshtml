@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Регистрация (шаг 2)";
+}
+
+<link rel="stylesheet" href="~/css/auth.css" asp-append-version="true" />
+
+<div class="content">
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form" method="post" asp-action="RegisterStep2">
+                <input type="text" id="first_name" name="first_name" placeholder="Имя" required />
+                <input type="text" id="last_name" name="last_name" placeholder="Фамилия" required />
+                <input type="text" id="middle_name" name="middle_name" placeholder="Отчество" />
+                <input type="tel" id="phone" name="phone" placeholder="Номер телефона" required />
+                <input type="email" id="email" name="email" placeholder="Электронная почта" />
+                <div class="but">
+                    <button type="submit" class="btn">Зарегистрироваться</button>
+                </div>
+                <div asp-validation-summary="All" class="text-danger"></div> <!-- Отображение ошибок -->
+            </form>
+        </div>
+    </div>
+</div>

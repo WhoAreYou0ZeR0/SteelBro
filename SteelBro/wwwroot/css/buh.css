@@ -1,0 +1,44 @@
+.finance_info {
+    color: var(--info-font-color);
+    background-color: #c9d6b6;
+    padding: 20px;
+    max-width: 50%;
+    width: 50%;
+    margin: 20vh auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.but button:first-child {
+    margin-right: 10vw;
+}
+
+#but1 {
+    margin: auto;
+    margin-left: 2vw;
+}
+
+.add-operation-form {
+    margin-bottom: 20px;
+}
+
+.add-operation-form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.add-operation-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-operation-form select, .add-operation-form input[type="number"], .add-operation-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+

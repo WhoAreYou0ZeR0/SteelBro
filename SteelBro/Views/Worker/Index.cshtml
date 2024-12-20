@@ -1,0 +1,26 @@
+﻿@{
+	ViewData["Title"] = "Личный кабинет";
+}
+<link rel="stylesheet" href="~/css/personal.css" asp-append-version="true" />
+<section class="content-block">
+	<h3>Информация</h3>
+	<div class="blocks">
+		<div class="user-info-attributes">
+			<p><strong>ФИО:</strong></p>
+			<p><strong>Имя пользователя:</strong></p>
+			<p><strong>Номер телефона:</strong></p>
+			<p><strong>Email:</strong></p>
+			<p><strong>Должность:</strong></p>
+		</div>
+		<div class="user-info">
+			<p id="FIO">@Model.FullName</p>
+			<p id="username">@Model.Username</p>
+			<p id="phone">@Model.PhoneNumber</p>
+			<p id="email">@Model.Email</p>
+			<p id="post">@Model.PostName</p>
+		</div>
+	</div>
+</section>
+<div class="but">
+	<a href="@Url.Action("Logout", "Auth")" class="btn">Выйти из аккаунта</a>
+</div>

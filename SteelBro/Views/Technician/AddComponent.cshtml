@@ -1,0 +1,37 @@
+﻿@model SteelBro.Models.Order
+
+@{
+    ViewData["Title"] = "Добавление комплектующего";
+}
+
+<link rel="stylesheet" href="~/css/technic.css" asp-append-version="true" />
+<section class="content-block">
+    <section class="add-component-form">
+        <form id="add-component-form">
+            <label for="nameComp">Название комплектующего</label>
+            <input type="text" id="nameComp" name="nameComp" required>
+
+            <label for="description">Техническая характеристика</label>
+            <input type="text" id="description" name="description" required>
+
+            <label for="quantity">Количество</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <label for="amount">Цена</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <div class="but" id="buttonsDif">
+                <button type="submit" class="btn">Добавить комплектующее</button>
+                <button type="reset" class="btn">Очистить форму</button>
+            </div>
+        </form>
+        <div class="buttons">
+            <div class="but">
+                <button id="back" class="btn">Назад</button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<script src="~/js/add_delete/addComponent.js" asp-append-version="true"></script>
+<script src="~/js/backScript.js" asp-append-version="true"></script>

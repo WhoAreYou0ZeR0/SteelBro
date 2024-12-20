@@ -1,0 +1,46 @@
+.intro {
+    background-color: var(--info-bg-color);
+    text-align: center;
+    padding: 20px;
+    color: var(--info-font-color);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  .intro p {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+
+  .features h2, .workflow h2 {
+    font-size: 18pt;
+    color: var(--info-bg-color);
+  }
+  
+  .features, .workflow {
+    background-color: var(--green-bg-color);
+    color: var(--info-font-color);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1200px;
+    text-align: center;
+  }
+  
+  .features h2, .workflow h2 {
+    margin-bottom: 15px;
+  }
+  
+  .features .grid, .workflow .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .features .grid div, .workflow .grid div {
+    background-color: var(--info-bg-color);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }

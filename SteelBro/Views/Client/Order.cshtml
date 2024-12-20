@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Оформление заказа";
+}
+<link rel="stylesheet" href="~/css/order.css" asp-append-version="true" />
+
+<section class="order-form">
+    <h1>Заполните форму для оформления заказа:</h1>
+    <form id="order-form" method="post" asp-action="Order">
+        <label for="service">Услуга</label>
+        <select id="service" name="ServiceId" required>
+            <option value="">Выберите услугу</option>
+            @foreach (var service in ViewBag.Services)
+            {
+                <option value="@service.ServiceId">@service.ServiceName</option>
+            }
+        </select>
+        <label for="worker">Работник</label>
+        <select id="worker" name="WorkerId" required>
+            <option value="">Выберите работника</option>
+            @foreach (var worker in ViewBag.Workers)
+            {
+                <option value="@worker.WorkerId">@worker.LastName @worker.FirstName @worker.MiddleName</option>
+            }
+        </select>
+
+        <label for="description">Кратко опишите свою проблему</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <div class="but">
+            <button class="btn" type="submit">Отправить</button>
+        </div>
+    </form>
+</section>

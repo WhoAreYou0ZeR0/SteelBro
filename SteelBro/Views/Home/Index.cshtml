@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+<link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="~/images/slider_img1.jpg" style="width:100%" alt="slider1">
+        <div class="text">Ремонт, обслуживание смартфонов и прочих гаджетов</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="~/images/slider_img2.jpeg" style="width:100%" alt="slider2">
+        <div class="text">Настройка Wi-Fi роутеров и доступа в Интернет, организация компьютерных сетей</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="~/images/slider_img3.jpg" style="width:100%" alt="slider3">
+        <div class="text">Обслуживание и администрирование Windows, сборка системных блоков</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a id="prev" class="prev">&#10094;</a>
+    <a id="next" class="next">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div class="dots">
+    <span class="dot" id="dot1"></span>
+    <span class="dot" id="dot2"></span>
+    <span class="dot" id="dot3"></span>
+</div>
+
+<div class="block-info">
+    <p>
+        В современном мире компьютеры и ноутбуки стали неотъемлемой частью нашей жизни. Но что делать, если техника
+        выходит из строя? Вот тут-то и приходит на помощь компьютерная мастерская SteelBro! Мы предлагаем широкий спектр
+        услуг для решения любых проблем с вашей техникой.
+    </p>
+    <h1>Чем мы занимаемся?</h1>
+    <ul>
+        <li>
+            Ремонт компьютеров и ноутбуков любой сложности: от замены комплектующих до устранения сложных программных
+            ошибок.
+        </li>
+        <li>
+            Установка и настройка программного обеспечения: операционных систем, антивирусов, офисных приложений и
+            многого другого.
+        </li>
+        <li>Чистка и оптимизация для повышения производительности вашего устройства.</li>
+        <li>Защита данных: восстановление утерянных файлов, резервное копирование и настройка облачных хранилищ.</li>
+        <li>
+            Обновление оборудования: замена жестких дисков на SSD, увеличение оперативной памяти и другие модернизации.
+        </li>
+    </ul>
+    <h1>Почему стоит выбрать нас?</h1>
+    <ul>
+        <li>Опыт и профессионализм: наша команда состоит из квалифицированных специалистов с многолетним опытом.</li>
+        <li>Качественные запчасти: мы используем только оригинальные комплектующие и надежные бренды.</li>
+        <li>Быстрое выполнение работ: ремонт выполняется в кратчайшие сроки без потери качества.</li>
+        <li>Гарантия на услуги: мы уверены в своей работе и предоставляем гарантию на все выполненные услуги.</li>
+        <li>Индивидуальный подход: мы учитываем ваши пожелания и бюджет, предлагая оптимальные решения.</li>
+    </ul>
+    <br>
+</div>
+<div class="but">
+    <a href="@Url.Action("Order", "Client")" class="btn">Оформить заказ</a>
+</div>
+
+<script src="~/js/slider.js" asp-append-version="true"></script>

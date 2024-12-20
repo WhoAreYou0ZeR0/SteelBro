@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Вход";
+}
+
+<link rel="stylesheet" href="~/css/auth.css" asp-append-version="true" />
+
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" method="post" asp-action="Index">
+                <input type="text" id="username" name="username" placeholder="Имя пользователя" required />
+                <input type="password" id="password" name="password" placeholder="Пароль" required />
+                <div class="but">
+                    <button type="submit" class="btn">Вход</button>
+                </div>
+                <div class="message">
+                    <p>Нет аккаунта?</p>
+                    <p><a class="register-link text-dark" asp-area="" asp-controller="Auth" asp-action="RegisterStep1">Зарегистрируйся</a></p>
+                </div>
+                <div asp-validation-summary="All" class="text-danger"></div> <!-- Отображение ошибок -->
+            </form>
+        </div>
+    </div>
